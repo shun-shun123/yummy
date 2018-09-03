@@ -13,11 +13,21 @@ class HomeActivity : AppCompatActivity() {
 
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
-                bottomNavigationView.menu.getItem(0).itemId -> Toast.makeText(this@HomeActivity, "HOME", Toast.LENGTH_SHORT).show()
-                bottomNavigationView.menu.getItem(1).itemId -> Toast.makeText(this@HomeActivity, "SEARCH", Toast.LENGTH_SHORT).show()
-                bottomNavigationView.menu.getItem(2).itemId -> Toast.makeText(this@HomeActivity, "CAMERA", Toast.LENGTH_SHORT).show()
-                bottomNavigationView.menu.getItem(3).itemId -> Toast.makeText(this@HomeActivity, "SCHOOL", Toast.LENGTH_SHORT).show()
-                bottomNavigationView.menu.getItem(4).itemId -> Toast.makeText(this@HomeActivity, "PERSONAL", Toast.LENGTH_SHORT).show()
+                bottomNavigationView.menu.getItem(0).itemId -> {
+                    Toast.makeText(this@HomeActivity, "HOME", Toast.LENGTH_SHORT).show()
+                }
+                bottomNavigationView.menu.getItem(1).itemId -> {
+                    Toast.makeText(this@HomeActivity, "SEARCH", Toast.LENGTH_SHORT).show()
+                }
+                bottomNavigationView.menu.getItem(2).itemId -> {
+                    Toast.makeText(this@HomeActivity, "CAMERA", Toast.LENGTH_SHORT).show()
+                }
+                bottomNavigationView.menu.getItem(3).itemId -> {
+                    Toast.makeText(this@HomeActivity, "SCHOOL", Toast.LENGTH_SHORT).show()
+                }
+                bottomNavigationView.menu.getItem(4).itemId -> {
+                    Toast.makeText(this@HomeActivity, "PERSONAL", Toast.LENGTH_SHORT).show()
+                }
             }
             true
         }
