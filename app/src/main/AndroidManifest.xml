@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".Search.SearchActivity" />
         <activity android:name=".School.SchoolAcitvity" />
-        <activity android:name=".Personal.PersonalActivity"></activity>
+        <activity android:name=".Personal.PersonalActivity" />
+        <activity android:name=".Camera.CameraActivity"></activity>
     </application>
 
 </manifest>
