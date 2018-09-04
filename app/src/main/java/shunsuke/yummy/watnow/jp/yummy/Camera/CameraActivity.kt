@@ -5,7 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_home.*
-import shunsuke.yummy.watnow.jp.yummy.HomeActivity
+import shunsuke.yummy.watnow.jp.yummy.Home.HomeActivity
 import shunsuke.yummy.watnow.jp.yummy.Personal.PersonalActivity
 import shunsuke.yummy.watnow.jp.yummy.R
 import shunsuke.yummy.watnow.jp.yummy.School.SchoolAcitvity

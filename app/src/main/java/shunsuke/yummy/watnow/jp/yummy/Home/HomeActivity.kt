@@ -1,4 +1,4 @@
-package shunsuke.yummy.watnow.jp.yummy
+package shunsuke.yummy.watnow.jp.yummy.Home
 
 import android.content.Context
 import android.content.Intent
@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_home.*
 import shunsuke.yummy.watnow.jp.yummy.Camera.CameraActivity
 import shunsuke.yummy.watnow.jp.yummy.Personal.PersonalActivity
+import shunsuke.yummy.watnow.jp.yummy.R
 import shunsuke.yummy.watnow.jp.yummy.School.SchoolAcitvity
 import shunsuke.yummy.watnow.jp.yummy.Search.SearchActivity
 
