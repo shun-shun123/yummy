@@ -81,6 +81,18 @@
             android:layout_gravity="start"
             android:src="@drawable/logo"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:fontFamily="cursive"
+            android:text="yummy"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="30sp"
+            android:textStyle="italic"
+            android:layout_gravity="center_vertical|center_horizontal|start"
+            />
+
     </android.support.v7.widget.Toolbar>
 
 </android.support.constraint.ConstraintLayout>
