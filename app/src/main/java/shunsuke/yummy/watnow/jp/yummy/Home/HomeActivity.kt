@@ -20,6 +20,7 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+        setupViewPager()
 
         bottomNavigationView.menu.getItem(MENU_ID).setChecked(true)
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
@@ -35,5 +36,12 @@ class HomeActivity : AppCompatActivity() {
                 startActivity(intent)
             true
         }
+    }
+
+    private fun setupViewPager() {
+        val manager = supportFragmentManager
+        val adapter = MyFragmentAdapter(manager)
+        viewPager.adapter = adapter
+        tabLayout.setupWithViewPager(viewPager)
     }
 }
