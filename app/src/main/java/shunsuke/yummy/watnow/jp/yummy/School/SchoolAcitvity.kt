@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.google.android.gms.maps.MapFragment
 import kotlinx.android.synthetic.main.activity_home.*
 import shunsuke.yummy.watnow.jp.yummy.Camera.CameraActivity
 import shunsuke.yummy.watnow.jp.yummy.Home.HomeActivity
@@ -20,6 +21,13 @@ class SchoolAcitvity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_school_acitvity)
+
+        // GoogleMapを表示
+        val mf = MapFragment.newInstance()
+        val fm = fragmentManager
+        val ft = fm.beginTransaction()
+        ft.add(android.R.id.content, mf)
+        ft.commit()
 
         bottomNavigationView.menu.getItem(MENU_ID).setChecked(true)
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
