@@ -20,6 +20,6 @@ class MyFragment: Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.view_pager_fragment, null)
+        return inflater.inflate(R.layout.home_view_pager_fragment, null)
     }
 }
