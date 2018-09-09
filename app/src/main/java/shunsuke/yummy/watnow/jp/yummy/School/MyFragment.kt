@@ -1,15 +1,20 @@
 package shunsuke.yummy.watnow.jp.yummy.School
 
 import android.os.Bundle
-import android.support.constraint.ConstraintLayout
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.MapView
+import com.google.android.gms.maps.MapsInitializer
 import shunsuke.yummy.watnow.jp.yummy.R
 
 
-class MyFragment: Fragment() {
+class MyFragment(): Fragment() {
+
+    private lateinit var mMapView: MapView
+    private var googleMap: GoogleMap? = null
 
     companion object {
         fun newInstance(mode: Int): MyFragment {
@@ -27,10 +32,15 @@ class MyFragment: Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.school_view_pager_fragment, null)
-        val constraintLayout: ConstraintLayout = view.findViewById(R.id.school_view_pager_container)
         if (arguments?.getInt("MODE") == 0) {
-            // GoogleMap表示モード: 0
-            constraintLayout.setBackgroundColor(0xffffff)
+            mMapView = view.findViewById<MapView>(R.id.map_view)
+            mMapView.onCreate(savedInstanceState)
+            mMapView.onResume()
+            try {
+                MapsInitializer.initialize(activity?.applicationContext)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
         }
         return view
     }
