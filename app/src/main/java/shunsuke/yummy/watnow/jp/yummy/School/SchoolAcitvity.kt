@@ -4,8 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.google.android.gms.maps.MapFragment
-import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_school_acitvity.*
 import shunsuke.yummy.watnow.jp.yummy.Camera.CameraActivity
 import shunsuke.yummy.watnow.jp.yummy.Home.HomeActivity
 import shunsuke.yummy.watnow.jp.yummy.Personal.PersonalActivity
@@ -22,12 +21,14 @@ class SchoolAcitvity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_school_acitvity)
 
-        // GoogleMapを表示
-        val mf = MapFragment.newInstance()
-        val fm = fragmentManager
-        val ft = fm.beginTransaction()
-        ft.add(android.R.id.content, mf)
-        ft.commit()
+//        // GoogleMapを表示
+//        val mf = MapFragment.newInstance()
+//        val fm = fragmentManager
+//        val ft = fm.beginTransaction()
+//        ft.add(android.R.id.content, mf)
+//        ft.commit()
+
+        setupViewPager()
 
         bottomNavigationView.menu.getItem(MENU_ID).setChecked(true)
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
@@ -43,5 +44,12 @@ class SchoolAcitvity : AppCompatActivity() {
                 startActivity(intent)
             true
         }
+    }
+
+    private fun setupViewPager() {
+        val manager = supportFragmentManager
+        val adapter = MyFragmentAdapter(manager)
+        schoolViewPager.adapter = adapter
+        schoolTabLayout.setupWithViewPager(schoolViewPager)
     }
 }
