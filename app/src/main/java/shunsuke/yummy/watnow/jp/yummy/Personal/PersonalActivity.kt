@@ -31,7 +31,7 @@ class PersonalActivity : AppCompatActivity() {
                 bottomNavigationView.menu.getItem(4).itemId -> null
                 else -> null
             }
-            if (!(intent == null))
+            if (intent != null)
                 startActivity(intent)
             true
         }

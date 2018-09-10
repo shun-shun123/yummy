@@ -31,7 +31,7 @@ class CameraActivity : AppCompatActivity() {
                 bottomNavigationView.menu.getItem(4).itemId -> Intent(mContext, PersonalActivity::class.java)
                 else -> null
             }
-            if (!(intent == null))
+            if (intent != null)
                 startActivity(intent)
             true
         }
