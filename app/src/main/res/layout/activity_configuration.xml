@@ -4,28 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Camera.CameraActivity">
+    tools:context=".Home.ConfigurationActivity">
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottomNavigationView"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu"
-        />
+        app:menu="@menu/bottom_nav_menu" />
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/white"
+        android:background="@android:color/white"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -33,20 +30,18 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_gravity="start"
-            android:src="@drawable/logo"/>
+            android:src="@drawable/logo" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="40dp"
+            android:layout_gravity="center_vertical|center_horizontal|start"
             android:fontFamily="cursive"
             android:text="yummy"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textSize="30sp"
-            android:textStyle="italic"
-            android:layout_gravity="center_vertical|center_horizontal|start"
-            />
-
+            android:textStyle="italic" />
     </android.support.v7.widget.Toolbar>
 
 </android.support.constraint.ConstraintLayout>
