@@ -4,4 +4,6 @@
     <dimen name="TitleSize">20sp</dimen>
     <dimen name="layoutPadding">30dp</dimen>
     <dimen name="iconSize">30dp</dimen>
+    <dimen name="nameSize">18sp</dimen>
+    <dimen name="nameLeftPadding">20dp</dimen>
 </resources>
